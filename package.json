@@ -5,8 +5,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"clean": "rimraf .next .turbo",
-		"typecheck": "tsc --noEmit"
+	    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && next build" // Add this line
 	},
 	"dependencies": {
 		"@emotion/react": "^11",
